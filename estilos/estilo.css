@@ -1,0 +1,102 @@
+header{
+    background-color: aqua;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    transition: 5s;
+    color: white;
+    align-items: center;
+}
+
+
+.contenedor{
+  align-items: flex-end;
+  background-color: transparent;
+  width: 300px;
+  height: 250px;
+  margin-top: 850px;
+  margin-left: 1350px;
+  visibility: hidden;
+  perspective: 1000px;
+}
+
+.nuevoMarginTop{
+
+  margin-top: 500px;
+  transition: 3s;
+  visibility: visible;
+}
+
+.carta{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.contenedor:hover .carta{
+  transform: rotateY(180deg);
+}
+
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front{
+
+  color: black;
+}
+
+.back{
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+.imagen{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.visibilidad{
+  transition: 0s;
+  margin-top: 525px;
+  margin-left: 1500px;
+  visibility: hidden;
+}
+
+.animacion1{
+  visibility: hidden;
+  
+}
+
+
+
+.animacion{
+  visibility: visible;
+  width: 110px;
+  height: 156px;
+  margin: auto;
+  background: red;
+  background: url("../imagenes/animacion.png") repeat-x;
+  animation: caminandoPorLaVida 0.5s steps(6) infinite;
+
+  
+}
+
+@keyframes caminandoPorLaVida{
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -672px;
+  }
+}

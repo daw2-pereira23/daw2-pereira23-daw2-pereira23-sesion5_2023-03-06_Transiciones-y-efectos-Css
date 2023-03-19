@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAW_M9_PR5 - Animacions</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <script src="https://kit.fontawesome.com/4ac48fbc02.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+       <h1>DAW_M9_PR5 - Animacions</h1>
+        
+    </header>
+    <main>
+        <div class="animacion1"> 
+
+        </div>
+        <div class="contenedor" id="foto">
+            <div class="carta">
+                <div class="front">
+                    <img src="imagenes/perro-cahorro.jpg" class="imagen" alt="Imagen Perro" style="width: 250px;height: 250px;">
+                </div>
+                <div class="back">
+                    <p>Sergio Pereira Hidalgo</p>
+                    <i class="fa-regular fa-eye" id="icono"></i>
+                </div
+            </div>
+        </div>
+       
+    </main>
+
+</body>
+<script>
+    document.querySelector('header').addEventListener("click", ()=>{
+        console.log("Click");
+        const Contenedor = document.querySelector('.contenedor');
+        Contenedor.classList.add('nuevoMarginTop');
+        
+    })
+    document.querySelector('#foto').addEventListener("click", ()=>{
+        console.log("hola");
+    })
+    document.querySelector('#icono').addEventListener("click", ()=>{
+        
+        const contenedor = document.querySelector('.contenedor');
+        contenedor.classList.add('visibilidad')
+        const div = document.querySelector(".animacion1")
+        div.classList.remove(".animacion1")
+        div.classList.add("animacion")
+    })
+</script>
+</html>
